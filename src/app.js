@@ -7,8 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/test', (req, res) => {
-  res.send('OK');
-});
+// /api/places
+app.use('/api', require('./routes/api')); // delegar la gestion de la petición de esas rutas al fichero
 
 module.exports = app;
