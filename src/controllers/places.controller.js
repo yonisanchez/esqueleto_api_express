@@ -1,7 +1,7 @@
 const getPlaces = (req, res) => {
-  res.send('Recuepramos todos los palces');
+  res.json('Recuepramos todos los palces');
 };
-
+// si cambiamos res.send por res.json lo que obtenemos es un json
 const createPlace = (req, res) => {
   res.send('Creamos un nuevo place');
 };

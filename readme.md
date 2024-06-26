@@ -7,6 +7,7 @@ Los siguientes pasos no seran necesarios si directamente copiamos el reposirtori
 - _index.js_ creara el servidor y escuchara las peticiones
 - _src_ codigo de la aplicación
 - _app_ configuraciones del servidor
+- ...
 
 ## PASOS PARA EMPEZAR PROYECTO
 
@@ -30,3 +31,5 @@ Los siguientes pasos no seran necesarios si directamente copiamos el reposirtori
 - cors
 
 ` npm install express dotenv cors`
+
+## CONECTAR CON BBDD
