@@ -1,5 +1,12 @@
-const getPlaces = (req, res) => {
-  res.json('Recuepramos todos los palces');
+const db = require('../config/db');
+
+const getPlaces = async (req, res) => {
+  try {
+    const query = await db.query('select * from places');
+    res.send(query.rows);
+  } catch (err) {
+    console.log(err);
+  }
 };
 // si cambiamos res.send por res.json lo que obtenemos es un json
 const createPlace = (req, res) => {

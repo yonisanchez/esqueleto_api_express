@@ -27,8 +27,10 @@ Los siguientes pasos no seran necesarios si directamente copiamos el reposirtori
 ### LIBRERIAS BÄSICAS
 
 - Express
-- dotenv
+- dotenv -> variables de entorno
 - cors
+- pq -> db postgreSQL
+- mysql2 -> db mySql
 
 ` npm install express dotenv cors`
 
