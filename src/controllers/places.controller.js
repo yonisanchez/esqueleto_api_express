@@ -1,16 +1,23 @@
-const db = require('../config/db');
+const PlacesModel = require('../models/places.models');
 
 const getPlaces = async (req, res) => {
   try {
-    const query = await db.query('select * from places');
-    res.send(query.rows);
+    const { rows: places } = await PlacesModel.getAll();
+    res.json(places);
   } catch (err) {
-    console.log(err);
+    res.status(500).send('No se puede mostrar places');
   }
 };
+
 // si cambiamos res.send por res.json lo que obtenemos es un json
-const createPlace = (req, res) => {
-  res.send('Creamos un nuevo place');
+const createPlace = async (req, res) => {
+  try {
+    const result = await PlacesModel.createPlace(req.body);
+    console.log(result);
+    res.send(result);
+  } catch (err) {
+    res.status(500).send(err);
+  }
 };
 
 const updatePlace = (req, res) => {
